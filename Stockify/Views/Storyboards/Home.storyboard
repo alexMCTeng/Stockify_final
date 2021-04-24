@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Ff-YA-kdc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="SXI-E6-BiV">
+            <objects>
+                <navigationController id="2Ff-YA-kdc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="NFS-vJ-eDO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TLg-Ov-DBl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QSV-T1-6Fl" kind="relationship" relationship="rootViewController" id="Hfy-Sc-3Yx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O7E-Ce-HUD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1168" y="477"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="fuq-gz-nSa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="Ei4-aF-9ET" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aMt-wS-eTH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1786" y="1716"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="TSt-5E-9AB">
+            <objects>
+                <viewController id="QSV-T1-6Fl" customClass="HomeViewController" customModule="Stockify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oRt-r0-JCa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igd-vT-GRs">
+                                <rect key="frame" x="343" y="118" width="53" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Log in">
+                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ei4-aF-9ET" kind="modal" id="etG-S4-MR2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="362-AL-RC1">
+                                <rect key="frame" x="30" y="238" width="124" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" estimatedRowHeight="64" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NZ7-ax-54U">
+                                <rect key="frame" x="0.0" y="288" width="414" height="525"/>
+                                <color key="backgroundColor" red="0.1694806445" green="0.25145704520000001" blue="0.72852574479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedcell" rowHeight="64" id="VNS-xv-Kyh" customClass="FeedTableViewCell" customModule="Stockify" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VNS-xv-Kyh" id="XWa-6S-D5s">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.16948064445126557" green="0.25145704517200046" blue="0.72852574481865284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.1484281892" green="0.21970535120000001" blue="0.65952913840000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.08269231766462326" green="0.12098667770624161" blue="0.3620874285697937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NZ7-ax-54U" firstAttribute="trailing" secondItem="zb2-Nw-8Q8" secondAttribute="trailing" id="6Ft-IN-nNV"/>
+                            <constraint firstItem="362-AL-RC1" firstAttribute="top" secondItem="zb2-Nw-8Q8" secondAttribute="top" constant="150" id="OHt-2E-hiA"/>
+                            <constraint firstItem="zb2-Nw-8Q8" firstAttribute="trailing" secondItem="362-AL-RC1" secondAttribute="trailing" constant="260" id="RBm-Py-GFj"/>
+                            <constraint firstItem="Igd-vT-GRs" firstAttribute="top" secondItem="zb2-Nw-8Q8" secondAttribute="top" constant="30" id="YAB-gJ-aR4"/>
+                            <constraint firstItem="362-AL-RC1" firstAttribute="leading" secondItem="zb2-Nw-8Q8" secondAttribute="leading" constant="30" id="b8o-dW-bRK"/>
+                            <constraint firstItem="zb2-Nw-8Q8" firstAttribute="trailing" secondItem="Igd-vT-GRs" secondAttribute="trailing" constant="18" id="f1J-vj-AWA"/>
+                            <constraint firstItem="NZ7-ax-54U" firstAttribute="bottom" secondItem="zb2-Nw-8Q8" secondAttribute="bottom" id="qCj-RL-SrX"/>
+                            <constraint firstItem="NZ7-ax-54U" firstAttribute="leading" secondItem="zb2-Nw-8Q8" secondAttribute="leading" id="qnz-wa-DWh"/>
+                            <constraint firstItem="NZ7-ax-54U" firstAttribute="top" secondItem="362-AL-RC1" secondAttribute="bottom" constant="8" id="yKg-1r-RKE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zb2-Nw-8Q8"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="9EQ-Yb-Ld0"/>
+                    <connections>
+                        <outlet property="feedTableView" destination="NZ7-ax-54U" id="K6G-Nq-cum"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tee-Ch-Ze4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1218.4000000000001" y="1230.1349325337333"/>
+        </scene>
+        <!--StockProfile-->
+        <scene sceneID="dJl-w1-zLu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="StockProfile" id="lYk-Ym-mQ1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mSP-6A-b54"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SKg-JE-NXe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-400" y="1716"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+    </resources>
+</document>
