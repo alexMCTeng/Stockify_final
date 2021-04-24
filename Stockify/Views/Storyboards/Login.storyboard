@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5VX-BA-p5t">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Log in -->
+        <scene sceneID="a85-YA-7mh">
+            <objects>
+                <viewController id="5VX-BA-p5t" customClass="LoginViewController" customModule="Stockify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KSG-nW-Jgx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stockify" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJc-Me-O9y">
+                                <rect key="frame" x="20" y="82" width="131.5" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <color key="textColor" name="LIghtBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sign in to continue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbf-AO-1xr">
+                                <rect key="frame" x="20" y="134" width="153" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <color key="textColor" name="Blue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StocksScreen" translatesAutoresizingMaskIntoConstraints="NO" id="BtD-Ga-0fA">
+                                <rect key="frame" x="20" y="358" width="374" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BtD-Ga-0fA" secondAttribute="height" multiplier="332:169" id="PWu-iP-XKb"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xla-IF-6G1">
+                                <rect key="frame" x="169.5" y="789" width="75" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="USP-Ff-I4g"/>
+                                    <constraint firstAttribute="width" constant="75" id="akf-5w-K6T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" name="LIghtBlue"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutClicked:" destination="5VX-BA-p5t" eventType="touchUpInside" id="IP3-Yi-ikt"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTW-uI-tPc" customClass="GIDSignInButton">
+                                <rect key="frame" x="137" y="711" width="140" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Hvy-76-QA8"/>
+                                    <constraint firstAttribute="width" constant="140" id="cZd-lj-BgL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="O9b-qf-yLi"/>
+                        <color key="backgroundColor" name="DarkGray"/>
+                        <constraints>
+                            <constraint firstItem="O9b-qf-yLi" firstAttribute="trailing" secondItem="BtD-Ga-0fA" secondAttribute="trailing" constant="20" id="0xJ-XY-ttc"/>
+                            <constraint firstItem="sJc-Me-O9y" firstAttribute="top" secondItem="O9b-qf-yLi" secondAttribute="top" constant="38" id="6fS-a4-JbZ"/>
+                            <constraint firstItem="O9b-qf-yLi" firstAttribute="bottom" secondItem="xla-IF-6G1" secondAttribute="bottom" constant="40" id="H8I-4F-VjS"/>
+                            <constraint firstItem="BtD-Ga-0fA" firstAttribute="centerY" secondItem="O9b-qf-yLi" secondAttribute="centerY" id="JbK-pG-t6H"/>
+                            <constraint firstItem="xla-IF-6G1" firstAttribute="centerX" secondItem="O9b-qf-yLi" secondAttribute="centerX" id="Lef-oU-GWi"/>
+                            <constraint firstItem="tbf-AO-1xr" firstAttribute="top" secondItem="sJc-Me-O9y" secondAttribute="bottom" constant="12" id="RgY-ST-cmT"/>
+                            <constraint firstItem="O9b-qf-yLi" firstAttribute="bottom" secondItem="HTW-uI-tPc" secondAttribute="bottom" constant="81" id="Vez-gB-Pjs"/>
+                            <constraint firstItem="sJc-Me-O9y" firstAttribute="leading" secondItem="O9b-qf-yLi" secondAttribute="leading" constant="20" id="bM2-lQ-BUc"/>
+                            <constraint firstItem="HTW-uI-tPc" firstAttribute="centerX" secondItem="O9b-qf-yLi" secondAttribute="centerX" id="t1C-Bo-uxi"/>
+                            <constraint firstItem="tbf-AO-1xr" firstAttribute="leading" secondItem="O9b-qf-yLi" secondAttribute="leading" constant="20" id="wPh-8s-8on"/>
+                            <constraint firstItem="BtD-Ga-0fA" firstAttribute="centerX" secondItem="O9b-qf-yLi" secondAttribute="centerX" id="xZN-La-c2u"/>
+                            <constraint firstItem="BtD-Ga-0fA" firstAttribute="leading" secondItem="O9b-qf-yLi" secondAttribute="leading" constant="20" id="ydU-gu-ta7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Log in " id="JSg-GS-0jJ">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="u2z-E0-dne"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="signInButton" destination="HTW-uI-tPc" id="wuN-bj-rCS"/>
+                        <outlet property="signOutButton" destination="xla-IF-6G1" id="AVT-OU-CAB"/>
+                        <outlet property="sublabel" destination="tbf-AO-1xr" id="ehl-rq-Tqw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X6F-2j-VhR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2300" y="1230.8035714285713"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="StocksScreen" width="140.5" height="91.5"/>
+        <namedColor name="Blue">
+            <color red="0.19607843137254902" green="0.50980392156862742" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DarkGray">
+            <color red="0.10588235294117647" green="0.14901960784313725" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LIghtBlue">
+            <color red="0.73333333333333328" green="0.88235294117647056" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

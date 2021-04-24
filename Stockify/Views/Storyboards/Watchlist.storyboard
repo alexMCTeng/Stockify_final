@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mec-Fw-Ias">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favorites-->
+        <scene sceneID="wiQ-tj-kJM">
+            <objects>
+                <navigationController id="Mec-Fw-Ias" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" image="star.fill" catalog="system" id="IjG-Yd-bGC"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rDG-tm-kUC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cko-3X-ht3" kind="relationship" relationship="rootViewController" id="s0R-c3-ITk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yzm-Ky-L1D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165" y="71"/>
+        </scene>
+        <!--Watchlist-->
+        <scene sceneID="lLZ-B9-Ujb">
+            <objects>
+                <viewController id="cko-3X-ht3" customClass="WatchlistViewController" customModule="Stockify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0GA-UY-IFv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="33B-x3-q09">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UbH-w2-X3r">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="separatorColor" name="DarkGray"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1058823529" green="0.14901960780000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="UbH-w2-X3r" firstAttribute="top" secondItem="33B-x3-q09" secondAttribute="top" id="1IU-oy-dOw"/>
+                                    <constraint firstItem="UbH-w2-X3r" firstAttribute="leading" secondItem="33B-x3-q09" secondAttribute="leading" id="9My-Rf-d4D"/>
+                                    <constraint firstAttribute="trailing" secondItem="UbH-w2-X3r" secondAttribute="trailing" id="Bjp-6k-eLU"/>
+                                    <constraint firstAttribute="bottom" secondItem="UbH-w2-X3r" secondAttribute="bottom" id="Qo7-EZ-tRT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="DarkGray"/>
+                        <constraints>
+                            <constraint firstItem="33B-x3-q09" firstAttribute="leading" secondItem="FEd-jr-Zc2" secondAttribute="leading" id="KLg-Z1-HS2"/>
+                            <constraint firstItem="FEd-jr-Zc2" firstAttribute="trailing" secondItem="33B-x3-q09" secondAttribute="trailing" id="LY3-TS-jsJ"/>
+                            <constraint firstItem="33B-x3-q09" firstAttribute="top" secondItem="FEd-jr-Zc2" secondAttribute="top" id="XBJ-p6-J1f"/>
+                            <constraint firstItem="FEd-jr-Zc2" firstAttribute="bottom" secondItem="33B-x3-q09" secondAttribute="bottom" id="cS2-0v-LbL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FEd-jr-Zc2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Watchlist" id="pZo-8N-iwT">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="CNK-Jo-5uc">
+                            <connections>
+                                <action selector="addToWatchlist:" destination="cko-3X-ht3" id="wdY-LJ-yuh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="CNK-Jo-5uc" id="w8Z-kk-hoW"/>
+                        <outlet property="mainView" destination="33B-x3-q09" id="yN0-Cc-iMg"/>
+                        <outlet property="tableView" destination="UbH-w2-X3r" id="nft-R0-JMK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NPl-zJ-tL2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="221.53846153846152" y="840.28436018957348"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <namedColor name="DarkGray">
+            <color red="0.10588235294117647" green="0.14901960784313725" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
