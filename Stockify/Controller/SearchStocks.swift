@@ -2,7 +2,7 @@
 //  SearchStocks.swift
 //  Stockify
 //
-//  Created by Ege Çavuşoğlu on 12/10/20.
+//  Created by Alex Teng on 12/10/20.
 //  Copyright © 2020 Group24. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Stockify
 //
-//  Created by Angelica Harris on 11/21/20.
+//  Created by Alex Teng on 11/21/20.
 //  Copyright © 2020 Group24. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  LoginViewController.swift
 //  Stockify
 //
-//  Created by Ege Cavusoglu on 12/03/20.
+//  Created by Alex Teng on 12/03/20.
 //  Copyright © 2020 Group24. All rights reserved.
 //
 

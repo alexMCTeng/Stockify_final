@@ -2,8 +2,8 @@
 //  UserDefaults.swift
 //  Cameo
 //
-//  Created by Ege Çavuşoğlu on 11/8/20.
-//  Copyright © 2020 Ege Çavuşoğlu. All rights reserved.
+//  Created by Alex Teng on 11/8/20.
+//  Copyright © 2020 Alex Teng. All rights reserved.
 //
 
 import Foundation

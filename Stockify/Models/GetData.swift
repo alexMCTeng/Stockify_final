@@ -2,7 +2,7 @@
 //  GetData.swift
 //  Stockify
 //
-//  Created by Liam on 12/1/20.
+//  Created by Alex Teng on 12/1/20.
 //  Copyright © 2020 Group24. All rights reserved.
 //
 
