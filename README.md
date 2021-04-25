@@ -8,7 +8,7 @@ Feature:
 
 1. Users can login with Gmail.
 
-2. Add stocks into watchlist which will be stored in UserDefault.
+2. Add stocks into watchlist which will be stored in Firebase.
 
 3. When the targetd % change of price hit, a string to text sound notification will be played.
 
